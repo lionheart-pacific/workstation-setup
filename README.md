@@ -4,4 +4,9 @@ This project automates the process of setting up a macOS software development wo
 
 ## Goals
 
-Our goal is to automate the setup of the parts of our workstations that should be consistent, so that we share a common baseline for pairing and collaboration, while still allowing for personal preferences where they matter.
+Our goal is to automate the setup of the parts of our workstations that should be consistent, so that we share a common
+baseline for pairing and collaboration, while still allowing for personal preferences where they matter.
+
+## Components
+
+- [MDM configuration](./mdm/README.md): Configuration that is automatically deployed to all developer workstations.
