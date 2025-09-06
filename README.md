@@ -9,4 +9,6 @@ baseline for pairing and collaboration, while still allowing for personal prefer
 
 ## Components
 
+- [Developer configuration](./developer/README.md): Resources for streamlining and collaboratively maintaining
+  configuration managed by developers.
 - [MDM configuration](./mdm/README.md): Configuration that is automatically deployed to all developer workstations.
