@@ -9,3 +9,9 @@ customizations, should be left out. Contributions are encouraged.
 
 Keyboard > Keyboard Shortcuts > Services > Text  
 Disable: `Search man Page Index in Terminal` (avoids conflict with IntelliJ's Cmd‑Shift‑A Find Action)
+
+## Rectangle
+
+Rectangle is pre-installed for window management. This repo includes a
+shared [RectangleConfig.json](./RectangleConfig.json) with key mappings for consistent shortcuts across machines.
+You can import/export this file in Rectangle. Contributions to improve mappings are welcome.
