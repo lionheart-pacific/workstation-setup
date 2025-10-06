@@ -5,6 +5,15 @@ are important for keeping our environments consistent. The goal is to keep this 
 setup that support smooth workflows and pairing across machines. Items that aren't relevant to that, such as personal
 customizations, should be left out. Contributions are encouraged.
 
+## Tools
+
+### Installation
+
+Install Homebrew if you haven't already: https://brew.sh/.
+
+Run `brew bundle` from the project root directory to install tools/apps.
+
+
 ## System Preferences
 
 Keyboard > Keyboard Shortcuts > Services > Text  
