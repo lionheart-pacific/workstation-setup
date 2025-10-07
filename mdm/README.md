@@ -31,11 +31,6 @@ To update the profile:
 
 The update takes effect within seconds.
 
-## Applications
-
-Several applications are installed automatically through Jamf Now.
-The exact list is maintained in the Jamf Now web portal and is not tracked in this repository.
-
 ## Policies
 
 System-wide policies, such as password requirements and FileVault disk encryption, are also enforced through Jamf Now.
