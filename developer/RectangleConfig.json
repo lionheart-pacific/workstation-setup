@@ -257,7 +257,7 @@
       "modifierFlags" : 786432
     },
     "leftHalf" : {
-      "keyCode" : 123,
+      "keyCode" : 43,
       "modifierFlags" : 786432
     },
     "maximize" : {
@@ -277,7 +277,7 @@
       "modifierFlags" : 786432
     },
     "rightHalf" : {
-      "keyCode" : 124,
+      "keyCode" : 47,
       "modifierFlags" : 786432
     },
     "toggleTodo" : {
@@ -297,5 +297,5 @@
       "modifierFlags" : 786432
     }
   },
-  "version" : "96"
+  "version" : "97"
 }
