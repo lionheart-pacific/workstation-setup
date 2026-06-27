@@ -8,7 +8,7 @@ customizations, should be left out. Contributions are encouraged.
 ## Bootstrap
 
 To provision a new machine, run the bootstrap script. It installs Homebrew, installs our shared applications, configures
-Git, the Dock, Rectangle, and macOS preferences.
+Git, the Dock, and Rectangle.
 
 ```sh
 /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/lionheart-pacific/workstation-setup/main/developer/bootstrap.sh)"
@@ -24,8 +24,3 @@ update an existing machine after the Brewfile changes, run `brew bundle` from th
 Rectangle is used for window management. The bootstrap script imports the shared
 [RectangleConfig.json](./RectangleConfig.json) so shortcuts are consistent across machines. You can also import/export
 this file from Rectangle's settings. Contributions to improve mappings are welcome.
-
-## System Preferences
-
-The bootstrap script disables the `Search man Page Index in Terminal` service so it doesn't claim Cmd‑Shift‑A, which
-conflicts with IntelliJ's Find Action.
