@@ -11,6 +11,7 @@ DOCK_URL="$BASE_URL/scripts/dock.sh"
 GIT_CONFIG_URL="$BASE_URL/scripts/git-config.sh"
 RECTANGLE_URL="$BASE_URL/scripts/rectangle.sh"
 RECTANGLE_CONFIG_URL="$BASE_URL/RectangleConfig.json"
+MACOS_PREFERENCES_URL="$BASE_URL/scripts/macos-preferences.sh"
 
 echo "Starting Lionheart Pacific workstation bootstrap..."
 
@@ -72,6 +73,11 @@ RECTANGLE_CONFIG_PATH="$WORKDIR/RectangleConfig.json"
 curl -fsSL "$RECTANGLE_URL" -o "$RECTANGLE_SCRIPT_PATH"
 curl -fsSL "$RECTANGLE_CONFIG_URL" -o "$RECTANGLE_CONFIG_PATH"
 sh "$RECTANGLE_SCRIPT_PATH" "$RECTANGLE_CONFIG_PATH"
+
+MACOS_PREFERENCES_SCRIPT_PATH="$WORKDIR/macos-preferences.sh"
+
+curl -fsSL "$MACOS_PREFERENCES_URL" -o "$MACOS_PREFERENCES_SCRIPT_PATH"
+sh "$MACOS_PREFERENCES_SCRIPT_PATH"
 
 echo
 echo "Bootstrap complete."
