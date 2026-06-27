@@ -91,6 +91,18 @@
 						<key>StaticCode</key>
 						<false/>
 					</dict>
+					<dict>
+						<key>Authorization</key>
+						<string>Allow</string>
+						<key>CodeRequirement</key>
+						<string>anchor apple generic and identifier "com.pyrolyse.Fluor" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Q2E884V952)</string>
+						<key>Identifier</key>
+						<string>com.pyrolyse.Fluor</string>
+						<key>IdentifierType</key>
+						<string>bundleID</string>
+						<key>StaticCode</key>
+						<false/>
+					</dict>
 				</array>
 				<key>BluetoothAlways</key>
 				<array>
@@ -153,6 +165,14 @@
 					<key>TeamIdentifier</key>
 					<string>9BNSXJN65R</string>
 				</dict>
+				<dict>
+					<key>RuleType</key>
+					<string>BundleIdentifier</string>
+					<key>RuleValue</key>
+					<string>com.pyrolyse.Fluor</string>
+					<key>TeamIdentifier</key>
+					<string>Q2E884V952</string>
+				</dict>
 			</array>
 		</dict>
 		<dict>
@@ -169,6 +189,24 @@
 					<false/>
 					<key>GroupingType</key>
 					<integer>0</integer>
+					<key>NotificationsEnabled</key>
+					<true/>
+					<key>ShowInCarPlay</key>
+					<true/>
+					<key>ShowInLockScreen</key>
+					<true/>
+					<key>ShowInNotificationCenter</key>
+					<true/>
+					<key>SoundsEnabled</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>BadgesEnabled</key>
+					<true/>
+					<key>BundleIdentifier</key>
+					<string>com.pyrolyse.Fluor</string>
+					<key>CriticalAlertEnabled</key>
+					<false/>
 					<key>NotificationsEnabled</key>
 					<true/>
 					<key>ShowInCarPlay</key>
