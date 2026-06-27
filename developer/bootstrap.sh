@@ -9,6 +9,8 @@ BASE_URL="https://raw.githubusercontent.com/$REPO/$BRANCH/developer"
 BREWFILE_URL="$BASE_URL/Brewfile"
 DOCK_URL="$BASE_URL/scripts/dock.sh"
 GIT_CONFIG_URL="$BASE_URL/scripts/git-config.sh"
+RECTANGLE_URL="$BASE_URL/scripts/rectangle.sh"
+RECTANGLE_CONFIG_URL="$BASE_URL/RectangleConfig.json"
 
 echo "Starting Lionheart Pacific workstation bootstrap..."
 
@@ -63,6 +65,13 @@ DOCK_SCRIPT_PATH="$WORKDIR/dock.sh"
 
 curl -fsSL "$DOCK_URL" -o "$DOCK_SCRIPT_PATH"
 sh "$DOCK_SCRIPT_PATH"
+
+RECTANGLE_SCRIPT_PATH="$WORKDIR/rectangle.sh"
+RECTANGLE_CONFIG_PATH="$WORKDIR/RectangleConfig.json"
+
+curl -fsSL "$RECTANGLE_URL" -o "$RECTANGLE_SCRIPT_PATH"
+curl -fsSL "$RECTANGLE_CONFIG_URL" -o "$RECTANGLE_CONFIG_PATH"
+sh "$RECTANGLE_SCRIPT_PATH" "$RECTANGLE_CONFIG_PATH"
 
 echo
 echo "Bootstrap complete."
