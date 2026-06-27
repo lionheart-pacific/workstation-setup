@@ -268,6 +268,55 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>com.pyrolyse.Fluor</key>
+				<dict>
+					<key>Forced</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>AppRules</key>
+								<array>
+									<dict>
+										<key>behavior</key>
+										<integer>2</integer>
+										<key>id</key>
+										<string>com.jetbrains.intellij</string>
+										<key>path</key>
+										<string>/Applications/IntelliJ IDEA.app</string>
+									</dict>
+									<dict>
+										<key>behavior</key>
+										<integer>2</integer>
+										<key>id</key>
+										<string>app.tuple.app</string>
+										<key>path</key>
+										<string>/Applications/Tuple.app</string>
+									</dict>
+								</array>
+								<key>hideNotificationAuthorizationPopup</key>
+								<integer>1</integer>
+								<key>userNotificationEnablement</key>
+								<integer>0</integer>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadDisplayName</key>
+			<string>Fluor Managed Preferences</string>
+			<key>PayloadIdentifier</key>
+			<string>com.lionheartpacific.fluor.18ECB3C0-30FC-4581-AF06-973F2A11D431</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>18ECB3C0-30FC-4581-AF06-973F2A11D431</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
 	<string>Developer</string>
