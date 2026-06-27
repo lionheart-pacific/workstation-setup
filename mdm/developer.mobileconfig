@@ -230,49 +230,6 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>PayloadContent</key>
-			<dict>
-				<key>pbs</key>
-				<dict>
-					<key>Forced</key>
-					<array>
-						<dict>
-							<key>mcx_preference_settings</key>
-							<dict>
-								<key>NSServicesStatus</key>
-								<dict>
-									<key>com.apple.Terminal - Search man Page Index in Terminal - searchManPages</key>
-									<dict>
-										<key>enabled_context_menu</key>
-										<integer>0</integer>
-										<key>enabled_services_menu</key>
-										<integer>0</integer>
-										<key>presentation_modes</key>
-										<dict>
-											<key>ContextMenu</key>
-											<integer>0</integer>
-											<key>ServicesMenu</key>
-											<integer>0</integer>
-										</dict>
-									</dict>
-								</dict>
-							</dict>
-						</dict>
-					</array>
-				</dict>
-			</dict>
-			<key>PayloadDisplayName</key>
-			<string>pbs Managed Preferences</string>
-			<key>PayloadIdentifier</key>
-			<string>com.lionheartpacific.pbs.979E47B6-C004-47EC-B74A-72836CD700C1</string>
-			<key>PayloadType</key>
-			<string>com.apple.ManagedClient.preferences</string>
-			<key>PayloadUUID</key>
-			<string>979E47B6-C004-47EC-B74A-72836CD700C1</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
 	<string>Developer</string>
