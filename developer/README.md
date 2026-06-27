@@ -1,26 +1,18 @@
 # Developer Configuration
 
-This directory collects developer configuration items that are managed directly by developers (not covered by MDM) and
-are important for keeping our environments consistent. The goal is to keep this list concise and focused on aspects of
-setup that support smooth workflows and pairing across machines. Items that aren't relevant to that, such as personal
-customizations, should be left out. Contributions are encouraged.
+This directory holds the workstation bootstrap and the configuration it applies. These are the developer-managed parts
+of our setup (not covered by MDM) that should stay consistent across machines. Developers usually run the bootstrap from
+a link in our onboarding docs, so these notes are mainly for maintaining it. Keep it lean, leave out personal
+customizations, and feel free to contribute.
 
 ## Bootstrap
 
-To provision a new machine, run the bootstrap script. It installs Homebrew, installs our shared applications, configures
-Git, the Dock, and Rectangle.
+`bootstrap.sh` provisions a new machine. It installs Homebrew, installs the [Brewfile](./Brewfile) applications, and runs
+the configuration steps in [`scripts/`](./scripts). Run it with:
 
 ```sh
 /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/lionheart-pacific/workstation-setup/main/developer/bootstrap.sh)"
 ```
 
-## Applications
-
-Applications are installed from the [Brewfile](./Brewfile) with `brew bundle`. The bootstrap script does this for you. To
-update an existing machine after the Brewfile changes, run `brew bundle` from this directory.
-
-## Rectangle
-
-Rectangle is used for window management. The bootstrap script imports the shared
-[RectangleConfig.json](./RectangleConfig.json) so shortcuts are consistent across machines. You can also import/export
-this file from Rectangle's settings. Contributions to improve mappings are welcome.
+To change what gets installed or configured, edit the [Brewfile](./Brewfile) or the relevant script in
+[`scripts/`](./scripts).
