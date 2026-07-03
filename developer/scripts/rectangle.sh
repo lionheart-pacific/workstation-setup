@@ -23,3 +23,5 @@ if pgrep -x Rectangle >/dev/null 2>&1; then
 fi
 
 open -a Rectangle
+
+echo 'Rectangle will ask "Apply Rectangle configuration?" — click "Apply" to load these settings.'
