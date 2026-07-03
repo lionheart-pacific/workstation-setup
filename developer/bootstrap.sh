@@ -14,9 +14,12 @@ RECTANGLE_CONFIG_URL="$BASE_URL/RectangleConfig.json"
 
 echo "Starting Lionheart Pacific workstation bootstrap..."
 
+# Shared curl options: retry on transient network failures.
+CURL_RETRY="curl -fsSL --connect-timeout 10 --retry 5 --retry-connrefused --retry-delay 2"
+
 if ! command -v brew >/dev/null 2>&1; then
     echo "Homebrew is not installed. Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$($CURL_RETRY https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     echo "Homebrew is already installed."
 fi
@@ -49,7 +52,7 @@ trap 'rm -rf "$WORKDIR"' EXIT
 BREWFILE_PATH="$WORKDIR/Brewfile"
 
 echo "Downloading Brewfile..."
-curl -fsSL "$BREWFILE_URL" -o "$BREWFILE_PATH"
+$CURL_RETRY "$BREWFILE_URL" -o "$BREWFILE_PATH"
 
 echo "Running brew bundle..."
 "$BREW_BIN" bundle --file="$BREWFILE_PATH"
@@ -58,19 +61,19 @@ eval "$("$BREW_BIN" shellenv)"
 
 GIT_CONFIG_SCRIPT_PATH="$WORKDIR/git-config.sh"
 
-curl -fsSL "$GIT_CONFIG_URL" -o "$GIT_CONFIG_SCRIPT_PATH"
+$CURL_RETRY "$GIT_CONFIG_URL" -o "$GIT_CONFIG_SCRIPT_PATH"
 sh "$GIT_CONFIG_SCRIPT_PATH"
 
 DOCK_SCRIPT_PATH="$WORKDIR/dock.sh"
 
-curl -fsSL "$DOCK_URL" -o "$DOCK_SCRIPT_PATH"
+$CURL_RETRY "$DOCK_URL" -o "$DOCK_SCRIPT_PATH"
 sh "$DOCK_SCRIPT_PATH"
 
 RECTANGLE_SCRIPT_PATH="$WORKDIR/rectangle.sh"
 RECTANGLE_CONFIG_PATH="$WORKDIR/RectangleConfig.json"
 
-curl -fsSL "$RECTANGLE_URL" -o "$RECTANGLE_SCRIPT_PATH"
-curl -fsSL "$RECTANGLE_CONFIG_URL" -o "$RECTANGLE_CONFIG_PATH"
+$CURL_RETRY "$RECTANGLE_URL" -o "$RECTANGLE_SCRIPT_PATH"
+$CURL_RETRY "$RECTANGLE_CONFIG_URL" -o "$RECTANGLE_CONFIG_PATH"
 sh "$RECTANGLE_SCRIPT_PATH" "$RECTANGLE_CONFIG_PATH"
 
 echo
